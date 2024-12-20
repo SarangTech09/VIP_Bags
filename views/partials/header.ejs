@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <!-- Sticky Header -->
+    <nav class="w-full flex justify-between items-center fixed top-0 left-0 px-5 py-3 bg-white shadow-md z-50">
+        <h3 class="text-2xl font-semibold text-gray-800">VIP Bags</h3>
+        
+        <% var loggedin = typeof loggedin !== 'undefined' ? loggedin : true %>
+        <% if(loggedin) { %>
+            <div class="flex gap-5 items-center">
+                <a href="/shop" class="text-lg text-gray-700 hover:text-blue-500 transition duration-300">Shop</a>
+                <a href="/cart" class="text-lg text-gray-700 hover:text-blue-500 transition duration-300">Cart</a>
+                <a href="/profile" class="text-lg text-gray-700 hover:text-blue-500 transition duration-300">My Account</a>
+                <a href="/users/logout" class="text-lg text-red-600 hover:text-red-800 transition duration-300">Logout</a>
+            </div>
+        <%  } %>
+    </nav>
+
+    <!-- Page Content (Just for visualization) -->
+    <div class="mt-20 p-5">
+        <h1 class="text-3xl font-bold">Welcome to VIP Bags</h1>
+        <p class="mt-5 text-lg">Explore the best collection of premium bags and accessories.</p>
+    </div>
+
+</body>
+
+</html>
